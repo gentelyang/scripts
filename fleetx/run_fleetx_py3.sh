@@ -97,7 +97,7 @@ function run_gpu_models(){
 
 main() {
     before_hook
-    run_cpu_models
+    #run_cpu_models
     run_gpu_models
     
 }
