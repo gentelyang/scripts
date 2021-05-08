@@ -61,7 +61,7 @@ function resnet_static() {
     setproxy
     cd ${fleetx_path}/examples/resnet
     sed -i "s/epoch = 10/epoch = 1/g" train_fleet_static.py
-    fleetrun --gpus 0 train_fleet_static.py
+    fleetrun --gpus 0,1 train_fleet_static.py
     check_result $FUNCNAME
     kill_fleetx_process
 }
