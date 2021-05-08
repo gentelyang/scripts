@@ -37,7 +37,7 @@ function check_result() {
 function before_hook() { 
 #    wget --no-check-certificate  https://fleet.bj.bcebos.com/test/fleet_x-0.0.8-py2.py3-none-any.whl
 #    pip install fleet_x-0.0.8-py2.py3-none-any.whl
-#    pip install opencv-python==4.2.0.32
+    python -m pip install opencv-python==4.2.0.32
 #    echo "fleetx installed succ"
     python -m pip install pip==20.2.4
     python -m pip install scipy
