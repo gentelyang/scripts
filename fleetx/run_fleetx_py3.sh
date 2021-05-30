@@ -45,7 +45,9 @@ function before_hook() {
     python -m pip install pip==20.2.4
     python -m pip install scipy
     unsetproxy
-    python -m pip install paddlepaddle-gpu==2.1.0.dev0.post110 -f https://paddlepaddle.org.cn/whl/cu110/mkl/develop.html
+    wget https://paddle-wheel.bj.bcebos.com/develop-gpu-cuda11.0-cudnn8-mkl_gcc8.2/paddlepaddle_gpu-0.0.0.post110-cp37-cp37m-linux_x86_64.whl
+    python -m pip install paddlepaddle_gpu-0.0.0.post110-cp37-cp37m-linux_x86_64.whl
+ #   python -m pip install paddlepaddle-gpu==2.1.0.dev0.post110 -f https://paddlepaddle.org.cn/whl/cu110/mkl/develop.html
     echo "paddlepaddle installed succ"
 }
 
