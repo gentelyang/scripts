@@ -17,3 +17,18 @@
   *
   **************************************************************************/
 """
+import os
+import subprocess
+from utils import run_priority
+
+os.system("export CUDA_VISIBLE_DEVICES=0,1")
+class TestApi():
+    """test all api"""
+    def test_dist_fleet_spawn(self):
+        """test_dist_fleet_spawn"""
+        cmd = 'python dist_fleet_dygraph_spawn.py'
+        pro = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        out, err = pro.communicate()
+        print(out)
+        pro.wait()
+        pro.returncode == 0

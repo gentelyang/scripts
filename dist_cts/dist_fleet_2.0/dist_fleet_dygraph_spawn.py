@@ -55,7 +55,7 @@ def train(print_result=True):
     outputs = dp_layer(inputs)
     labels = paddle.randn([10, 1], 'float32')
     loss = loss_fn(outputs, labels)
-
+    assert len(loss) == 1
     if print_result is True:
         train_data_list1.append(loss.numpy())
     assert len(train_data_list1)

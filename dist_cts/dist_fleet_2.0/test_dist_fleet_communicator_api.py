@@ -122,3 +122,12 @@ class TestApi():
         print(out)
         pro.wait()
         pro.returncode == 0
+
+    def test_send_recv(self):
+        """test_send_recv"""
+        cmd = 'fleetrun dist_collective_send_recv.py'
+        pro = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        out, err = pro.communicate()
+        print(out)
+        pro.wait()
+        pro.returncode == 0
